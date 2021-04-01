@@ -42,6 +42,12 @@ export const FooterStyled = styled.div`
   padding: 20px 20px 30px 20px;
 `
 
+export const FooterContent = styled.div`
+  margin: 0px auto;
+  box-sizing: border-box;
+  max-width: 1280px;
+`
+
 export const FooterContainer = styled.div`
   display: block;
 
@@ -57,7 +63,7 @@ export const FooterColumn = styled.div`
   }
   
 `
-export const FooterBlockDesktop = styled(FooterColumn)`
+export const FooterBlockWithLinks = styled(FooterColumn)`
   @media ${device.desktop} {
     display: flex;
   }
