@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-export const device = {
-    desktop: `(min-width: 768px)`,
-};
+import {device} from "../../shared/helpers";
 
 export const Title = styled.h1`
   font-family: Mulish, "Helvetica Neue", Helvetica, Roboto, sans-serif;
@@ -13,12 +10,28 @@ export const Title = styled.h1`
   font-size: 4rem;
   
   @media ${device.desktop} {
-    color: black;
     margin-bottom: 40px;
     max-width: 550px;
     font-size: 7rem;
   }
 `;
+
+export const DecoratedText = styled.span`
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+    
+    &:after {
+      position: absolute;
+      height: 8px;
+      z-index: -1;
+      content: "";
+      width: 100%;
+      background-color: rgb(249, 93, 122);
+      left: 0px;
+      bottom: 4px;
+    }
+`
 
 export const FooterStyled = styled.div`
   background-color: rgb(8, 95, 99);
@@ -26,5 +39,5 @@ export const FooterStyled = styled.div`
   font-size: 1em;
   min-height: 120px;
   text-align: left;
-  padding-bottom: 30px;
+  padding: 20px 20px 30px 20px;
 `

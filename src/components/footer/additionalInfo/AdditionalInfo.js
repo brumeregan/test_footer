@@ -1,5 +1,6 @@
 import React from 'react';
 import {CheckedIcon} from "./CheckedIcon";
+import {CheckedWrapper, InfoList, InfoListItem} from './styles';
 
 export const AdditionalInfo = () => {
     const infoTexts = [
@@ -10,7 +11,13 @@ export const AdditionalInfo = () => {
     return <>
         <h5>additional subtitle</h5>
         <p>additional text</p>
-        {infoTexts.map((info) => {
-        return <div><CheckedIcon /> {info}</div>
-    })}</>
+        <InfoList>
+            {infoTexts.map((info) => {
+                return <InfoListItem>
+                    <CheckedWrapper><CheckedIcon /></CheckedWrapper>
+                    {info}
+                </InfoListItem>
+            })}
+        </InfoList>
+    </>
 }

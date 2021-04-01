@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import {Chevron} from "./Chevron";
-import {AccordionStyled, AccordionTitle,AccordionContent} from "./styles";
+import {AccordionStyled, AccordionTitle,AccordionContent, ChevronStyled} from "./styles";
 
 export const Accordion = ({title, content}) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +12,7 @@ export const Accordion = ({title, content}) => {
         <AccordionStyled>
             <AccordionTitle onClick={toggleAccordion}>
                 {title}
-                <Chevron width={10} fill={"#777"} />
+                <ChevronStyled isOpen={isOpen} />
             </AccordionTitle>
 
             <AccordionContent

@@ -1,14 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
 import {Footer} from './components/footer/Footer'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
 
-//TODO: router, error handler, tests, propTypes
+//TODO: error handler, tests, propTypes
 
 function App() {
   return (
-    <div>
+    <Router>
+        <Switch>
+            <Route exact path='/' >main page</Route>
+            <Route path="/*" render={(props) => <div>{props.location.pathname}</div>}/>
+
+        </Switch>
+
       <Footer/>
-    </div>
+    </Router>
   );
 }
 

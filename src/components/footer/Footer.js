@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {getFooter} from "../../services/getFooter";
-import {FooterBlock} from './footerBlock/footerBlock'
-import {Title, FooterStyled} from './styles';
+import {FooterBlock} from './footerBlock/FooterBlock'
+import {Title, FooterStyled, DecoratedText} from './styles';
 import {AdditionalInfo} from './additionalInfo/AdditionalInfo'
 
 export const Footer = () => {
@@ -9,7 +9,6 @@ export const Footer = () => {
 
     useEffect(() => {
         getFooter().then((response) => {
-            console.info({response})
             setFooterBlocks(response)
         }).catch((err) => {
             console.info({err})
@@ -17,8 +16,7 @@ export const Footer = () => {
     }, [])
 
     return <FooterStyled>
-        <Title>Sveriges största marknadsplats för fynd</Title>
-
+        <Title>Sveriges största marknadsplats för <DecoratedText>fynd</DecoratedText></Title>
         <AdditionalInfo/>
 
         {footerBlocks && footerBlocks.map((footerBlock) => <FooterBlock {...footerBlock} />)}

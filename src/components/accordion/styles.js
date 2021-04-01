@@ -1,14 +1,21 @@
 import styled from "styled-components";
+import {Chevron} from "./Chevron";
 
 export const AccordionStyled = styled.div`
   display: flex;
   flex-direction: column;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  
+  &:last-of-type {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
 `
 
 export const AccordionTitle = styled.button`
   cursor: pointer;
-  padding: 18px;
+  padding: 15px 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border: none;
   outline: none;
@@ -26,4 +33,9 @@ export const AccordionTitle = styled.button`
 export const AccordionContent = styled.div`
     height: ${({isOpen}) => isOpen ? 'auto' : '0'};
     overflow: hidden;
+`
+
+export const ChevronStyled = styled(Chevron)`
+  transform: ${({ isOpen }) =>
+          isOpen ? 'rotate(270deg)' : 'rotate(90deg)'};
 `
