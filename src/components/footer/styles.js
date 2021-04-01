@@ -41,3 +41,25 @@ export const FooterStyled = styled.div`
   text-align: left;
   padding: 20px 20px 30px 20px;
 `
+
+export const FooterContainer = styled.div`
+  display: block;
+
+  @media ${device.desktop} {
+    display: flex;
+  }
+`
+
+
+export const FooterColumn = styled.div`
+  @media ${device.desktop} {
+    width: 50%;
+  }
+  
+`
+export const FooterBlockDesktop = styled(FooterColumn)`
+  @media ${device.desktop} {
+    display: flex;
+  }
+`
+

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import {device} from "../../../../shared/helpers";
 
 export const LinkStyled = styled(Link)`
   color: rgba(255, 255, 255, 0.5);
@@ -14,4 +15,8 @@ export const LinkStyled = styled(Link)`
 export const LinkList = styled.ul`
   padding: 0 10px;
   margin: 0;
+
+  @media ${device.desktop} {
+    padding: 0;
+  }
 `

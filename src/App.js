@@ -14,9 +14,7 @@ function App() {
         <Switch>
             <Route exact path='/' >main page</Route>
             <Route path="/*" render={(props) => <div>{props.location.pathname}</div>}/>
-
         </Switch>
-
       <Footer/>
     </Router>
   );

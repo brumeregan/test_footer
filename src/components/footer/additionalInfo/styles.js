@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {device} from "../../../shared/helpers";
 
-
 export const CheckedWrapper = styled.span`
   width: 22px;
   height: 22px;
@@ -24,6 +23,10 @@ export const InfoList = styled.ul`
   justify-content: flex-start;
   flex-wrap: wrap;
   border-bottom: 0px;
+
+  @media ${device.desktop} {
+    display: block;
+  }
 `
 
 export const InfoListItem = styled.li`

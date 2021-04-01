@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {getFooter} from "../../services/getFooter";
 import {FooterBlock} from './footerBlock/FooterBlock'
-import {Title, FooterStyled, DecoratedText} from './styles';
+import {Title, FooterStyled, DecoratedText, FooterContainer, FooterBlockDesktop, FooterColumn} from './styles';
 import {AdditionalInfo} from './additionalInfo/AdditionalInfo'
 
 export const Footer = () => {
@@ -17,8 +17,18 @@ export const Footer = () => {
 
     return <FooterStyled>
         <Title>Sveriges största marknadsplats för <DecoratedText>fynd</DecoratedText></Title>
-        <AdditionalInfo/>
 
-        {footerBlocks && footerBlocks.map((footerBlock) => <FooterBlock {...footerBlock} />)}
+        <FooterContainer>
+            <FooterColumn>
+                <AdditionalInfo/>
+
+            </FooterColumn>
+
+            <FooterBlockDesktop>
+                {footerBlocks && footerBlocks.map((footerBlock) => <FooterBlock {...footerBlock} />)}
+            </FooterBlockDesktop>
+        </FooterContainer>
+
+
     </FooterStyled>
 }
