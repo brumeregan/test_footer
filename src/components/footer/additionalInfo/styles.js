@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {device} from "../../../shared/helpers";
+import { device } from "../../../shared/helpers";
 
 export const CheckedWrapper = styled.span`
   width: 22px;
@@ -12,7 +12,7 @@ export const CheckedWrapper = styled.span`
   background-color: rgb(55, 195, 164);
   border-radius: 50%;
   margin-right: 5px;
-`
+`;
 
 export const InfoList = styled.ul`
   margin: 0px 0px 20px;
@@ -27,7 +27,7 @@ export const InfoList = styled.ul`
   @media ${device.desktop} {
     display: block;
   }
-`
+`;
 
 export const InfoListItem = styled.li`
   margin: 5px 5px 5px 0;
@@ -37,4 +37,4 @@ export const InfoListItem = styled.li`
   @media ${device.desktop} {
     margin: 5px 0;
   }
-`
+`;

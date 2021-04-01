@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {device} from "../../../shared/helpers";
+import { device } from "../../../shared/helpers";
 
 export const BottomFooterStyled = styled.div`
   @media ${device.desktop} {
@@ -8,9 +8,9 @@ export const BottomFooterStyled = styled.div`
     justify-content: space-between;
     align-items: center;
     position: relative;
-    
+
     &:before {
-      content: '';
+      content: "";
       display: block;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       width: 100%;
@@ -18,5 +18,4 @@ export const BottomFooterStyled = styled.div`
       top: 0;
     }
   }
-`
-
+`;

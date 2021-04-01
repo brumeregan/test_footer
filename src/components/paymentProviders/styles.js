@@ -6,4 +6,4 @@ export const PaymentProviderContainer = styled.ul`
   align-items: center;
   padding: 0;
   max-width: 100%;
-`
+`;

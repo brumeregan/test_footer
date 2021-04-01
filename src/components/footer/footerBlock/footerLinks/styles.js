@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import {Link} from "react-router-dom";
-import {device} from "../../../../shared/helpers";
+import { Link } from "react-router-dom";
+import { device } from "../../../../shared/helpers";
 
 export const LinkStyled = styled(Link)`
   color: rgba(255, 255, 255, 0.5);
@@ -10,7 +10,7 @@ export const LinkStyled = styled(Link)`
   text-decoration: none;
   line-height: 2.5;
   word-break: break-word;
-`
+`;
 
 export const LinkList = styled.ul`
   padding: 0 10px;
@@ -19,4 +19,4 @@ export const LinkList = styled.ul`
   @media ${device.desktop} {
     padding: 0;
   }
-`
+`;

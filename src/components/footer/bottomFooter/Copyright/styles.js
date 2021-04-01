@@ -5,4 +5,4 @@ export const CopyrightText = styled.p`
   font-size: 1.4rem;
   font-weight: 400;
   margin: 0;
-`
+`;
