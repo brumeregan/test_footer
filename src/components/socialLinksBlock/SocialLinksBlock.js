@@ -22,7 +22,7 @@ export const SocialLinksBlock = () => {
 
     return <SocialLinksBlockStyled>
         {socials.map((social) => {
-            return <SocialLinksItem><a href={social.url} key={social.url} traget='_blank'>{social.component}</a></SocialLinksItem>
+            return <SocialLinksItem key={social.url}><a href={social.url}  traget='_blank'>{social.component}</a></SocialLinksItem>
         })}
 
     </SocialLinksBlockStyled>

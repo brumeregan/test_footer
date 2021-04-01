@@ -13,7 +13,7 @@ export const AdditionalInfo = () => {
         <p>additional text</p>
         <InfoList>
             {infoTexts.map((info) => {
-                return <InfoListItem>
+                return <InfoListItem key={info}>
                     <CheckedWrapper><CheckedIcon /></CheckedWrapper>
                     {info}
                 </InfoListItem>

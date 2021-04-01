@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {device} from "../../shared/helpers";
 
 export const SocialLinksBlockStyled = styled.ul`
   padding: 5px 0 15px;
@@ -7,6 +8,10 @@ export const SocialLinksBlockStyled = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media ${device.desktop} {
+    padding-bottom: 5px;
+  }
 `
 
 export const SocialLinksItem = styled.li`
